@@ -40,7 +40,7 @@ client.on("messageCreate", async(message) => {
         var resultCalcul = result["attributeScores"]["TOXICITY"]["summaryScore"]["value"]*100
         if(resultCalcul >= 50) {
         message.delete()
-        message.author.send("VYou have been punished with 10 seconds of mute, next time be a good Christian \n Toxicity:" + resultCalcul+"%")
+        message.author.send("You have been punished with 10 seconds of mute, next time be a good Christian \n Toxicity:" + resultCalcul+"%")
         message.member.timeout(10000, "Toxitiy : " + resultCalcul+"%")
         }
     })();
